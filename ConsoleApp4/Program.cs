@@ -23,7 +23,7 @@ namespace ConsoleApp2
                     double x1 , x2;
                     x1 = (-b + Math.Sqrt(d))/2*a;
                     x2 = (-b - Math.Sqrt(d))/2*a;
-                x1 = int.TryParse(x1);
+                
                     Console.WriteLine("ваши корни:" + x1 + " и " + x1);
             }
             else if  (!(d < 0) && !(d > 0))
