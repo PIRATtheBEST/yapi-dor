@@ -7,12 +7,13 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             Console.WriteLine("введите числа a,b,c");
+
             int a = Convert.ToInt32(Console.ReadLine());
-
+            
             int b = Convert.ToInt32(Console.ReadLine());
-
+            
             int c = Convert.ToInt32(Console.ReadLine());
-
+            
             Console.WriteLine("ваше уравнение:" + a + "x^2+" + b + "x+" + "c");
             double d = b ^ 2 - 4 * a * c;
 
