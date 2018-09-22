@@ -7,33 +7,36 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             Console.WriteLine("введите числа a,b,c");
-            int a;
-            a = Convert.ToInt32(Console.ReadLine());
-            int b;
-            b = Convert.ToInt32(Console.ReadLine());
-            int c;
-            c = Convert.ToInt32(Console.ReadLine());
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            int c = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("ваше уравнение:" + a + "x^2+" + b + "x+" + "c");
-            double d;
-            d = b ^ 2 - 4 * a * c;
-            if (d < 0) 
-                Console.WriteLine("d=" + d + " следовательно решений нет");
-            else if(d > 0)
+            double d = b ^ 2 - 4 * a * c;
+
+            if (d < 0)
             {
-                    double x1 , x2;
-                    x1 = (-b + Math.Sqrt(d))/2*a;
-                    x2 = (-b - Math.Sqrt(d))/2*a;
-                
-                    Console.WriteLine("ваши корни:" + x1 + " и " + x1);
+                Console.WriteLine("d<0 (" + d + ") следовательно решений нет");
             }
-            else if  (!(d < 0) && !(d > 0))
+            else if (d > 0)
             {
-                double x;               
-                x = -b / 2 * a;
+                double x1 = (-b + Math.Sqrt(d)) / 2 * a, x2 = (-b - Math.Sqrt(d)) / 2 * a;
+                x1 = Math.Round(x1, 2);
+
+                x2 = Math.Round(x2, 2);
+
+                Console.WriteLine("ваши корни:" + x1 + " и " + x1);
+            }
+            else
+            {
+                double x = -b / 2 * a;
+                x = Math.Round(x, 2);
                 Console.WriteLine("ваш корень:" + x);
             }
 
-            Console.ReadKey();        
+            Console.ReadKey();
         }
     }
 }
