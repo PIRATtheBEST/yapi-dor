@@ -12,7 +12,7 @@ namespace ConsoleApp2
             while (!int.TryParse(Console.ReadLine(), out a))
             {
                 Console.WriteLine("вы ввели не число!!!");
-            }           
+            }
             int b;
             while (!int.TryParse(Console.ReadLine(), out b))
             {
@@ -23,7 +23,7 @@ namespace ConsoleApp2
             {
                 Console.WriteLine("вы ввели не число!!!");
             }
-            Console.WriteLine("ваше уравнение:" + a + "x^2+" + b + "x+" + "c");
+            Console.WriteLine("ваше уравнение:" + a + "x^2+" + b + "x+" + c);
             double d = b ^ 2 - 4 * a * c;
 
             if (d < 0)
@@ -37,7 +37,7 @@ namespace ConsoleApp2
 
                 x2 = Math.Round(x2, 2);
 
-                Console.WriteLine("ваши корни:" + x1 + " и " + x1);
+                Console.WriteLine("ваши корни:" + x1 + " и " + x2);
             }
             else
             {
