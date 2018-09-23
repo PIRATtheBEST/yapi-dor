@@ -8,12 +8,21 @@ namespace ConsoleApp2
         {
             Console.WriteLine("введите числа a,b,c");
 
-            int a = Convert.ToInt32(Console.ReadLine());
-            
-            int b = Convert.ToInt32(Console.ReadLine());
-            
-            int c = Convert.ToInt32(Console.ReadLine());
-            
+            int a;
+            while (!int.TryParse(Console.ReadLine(), out a))
+            {
+                Console.WriteLine("вы ввели не число!!!");
+            }           
+            int b;
+            while (!int.TryParse(Console.ReadLine(), out b))
+            {
+                Console.WriteLine("вы ввели не число!!!");
+            }
+            int c;
+            while (!int.TryParse(Console.ReadLine(), out c))
+            {
+                Console.WriteLine("вы ввели не число!!!");
+            }
             Console.WriteLine("ваше уравнение:" + a + "x^2+" + b + "x+" + "c");
             double d = b ^ 2 - 4 * a * c;
 
