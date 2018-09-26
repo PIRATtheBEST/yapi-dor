@@ -4,12 +4,13 @@ namespace ConsoleApp2
 {
     class Program
     {
-        static int Proverka(int x)
+        public static void Proverka(int x)
         {
             while (!int.TryParse(Console.ReadLine(), out x))
             {
                 Console.WriteLine("вы ввели не число!!!");
             }
+            return ;
         }
 
             static void Main(string[] args)
@@ -22,17 +23,11 @@ namespace ConsoleApp2
             Console.WriteLine("введите числа a,b,c");
 
             int a;
-            
+            Proverka(a);
             int b;
-            while (!int.TryParse(Console.ReadLine(), out b))
-            {
-                Console.WriteLine("вы ввели не число!!!");
-            }
+            Proverka(b);
             int c;
-            while (!int.TryParse(Console.ReadLine(), out c))
-            {
-                Console.WriteLine("вы ввели не число!!!");
-            }
+            Proverka(c);
             Console.WriteLine("ваше уравнение:" + a + "x^2+" + b + "x+" + c);
             double d = b ^ 2 - 4 * a * c;
 
