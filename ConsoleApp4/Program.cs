@@ -4,15 +4,25 @@ namespace ConsoleApp2
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Proverka(int x)
         {
-            Console.WriteLine("введите числа a,b,c");
-
-            int a;
-            while (!int.TryParse(Console.ReadLine(), out a))
+            while (!int.TryParse(Console.ReadLine(), out x))
             {
                 Console.WriteLine("вы ввели не число!!!");
             }
+        }
+
+            static void Main(string[] args)
+        {
+
+            while (!int.TryParse(Console.ReadLine(), out x))
+            {
+                Console.WriteLine("вы ввели не число!!!");
+            }
+            Console.WriteLine("введите числа a,b,c");
+
+            int a;
+            
             int b;
             while (!int.TryParse(Console.ReadLine(), out b))
             {
@@ -48,5 +58,6 @@ namespace ConsoleApp2
 
             Console.ReadKey();
         }
+    
     }
 }
