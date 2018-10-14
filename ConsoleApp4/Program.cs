@@ -42,7 +42,7 @@ namespace ConsoleApp2
 
                 x2 = Math.Round(x2, 2);
 
-                Console.WriteLine("ваши корни:" + x1 + " и " + x2);
+                Console.WriteLine("ваши корни:" + x1 + " и " + x1);
             }
             else
             {
