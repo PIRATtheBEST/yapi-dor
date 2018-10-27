@@ -4,30 +4,28 @@ namespace ConsoleApp2
 {
     class Program
     {
-        public static void Proverka(int x)
+        public static int Proverka()
         {
+            int x;
             while (!int.TryParse(Console.ReadLine(), out x))
             {
                 Console.WriteLine("вы ввели не число!!!");
             }
-            return ;
+
+            return x;
+
         }
 
-            static void Main(string[] args)
+        static void Main(string[] args)
         {
+            Console.WriteLine("пожалуйста введите числа a,b,c");
 
-            while (!int.TryParse(Console.ReadLine(), out x))
-            {
-                Console.WriteLine("вы ввели не число!!!");
-            }
-            Console.WriteLine("введите числа a,b,c");
+            int a = Proverka();
 
-            int a;
-            Proverka(a);
-            int b;
-            Proverka(b);
-            int c;
-            Proverka(c);
+            int b = Proverka();
+
+            int c = Proverka();
+
             Console.WriteLine("ваше уравнение:" + a + "x^2+" + b + "x+" + c);
             double d = b ^ 2 - 4 * a * c;
 
@@ -42,7 +40,7 @@ namespace ConsoleApp2
 
                 x2 = Math.Round(x2, 2);
 
-                Console.WriteLine("ваши корни:" + x1 + " и " + x1);
+                Console.WriteLine("ваши корни:" + x1 + " и " + x2);
             }
             else
             {
@@ -53,6 +51,6 @@ namespace ConsoleApp2
 
             Console.ReadKey();
         }
-    
+
     }
 }
