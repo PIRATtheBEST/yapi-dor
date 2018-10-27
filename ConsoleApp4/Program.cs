@@ -4,7 +4,7 @@ namespace ConsoleApp2
 {
     class Program
     {
-        public static int Proverka()
+        public static int CheckForInput()
         {
             int x;
             while (!int.TryParse(Console.ReadLine(), out x))
@@ -20,11 +20,11 @@ namespace ConsoleApp2
         {
             Console.WriteLine("пожалуйста введите числа a,b,c");
 
-            int a = Proverka();
+            int a = CheckForInput();
 
-            int b = Proverka();
+            int b = CheckForInput();
 
-            int c = Proverka();
+            int c = CheckForInput();
 
             Console.WriteLine("ваше уравнение:" + a + "x^2+" + b + "x+" + c);
             double d = b ^ 2 - 4 * a * c;
