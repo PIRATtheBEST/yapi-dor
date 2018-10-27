@@ -1,0 +1,19 @@
+diff a/ConsoleApp4/Program.cs b/ConsoleApp4/Program.cs	(rejected hunks)
+@@ -12,7 +12,7 @@
+             while (!int.TryParse(Console.ReadLine(), out a))
+             {
+                 Console.WriteLine("вы ввели не число!!!");
+-            }           
++            }
+             int b;
+             while (!int.TryParse(Console.ReadLine(), out b))
+             {
+@@ -23,7 +23,7 @@
+             {
+                 Console.WriteLine("вы ввели не число!!!");
+             }
+-            Console.WriteLine("ваше уравнение:" + a + "x^2+" + b + "x+" + "c");
++            Console.WriteLine("ваше уравнение:" + a + "x^2+" + b + "x+" + c);
+             double d = b ^ 2 - 4 * a * c;
+ 
+             if (d < 0)
